@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 st.title('Welcome to Number Guessing Game')
-st.write('### where you guess a number ')
+st.write('### where you guess a num ') 
 
 num = random.randrange(1, 4)
 
