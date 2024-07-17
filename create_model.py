@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np 
 import sklearn
 import pickle 
+import streamlit as st
 
 df = pd.read_csv((r'./'iris.csv') 
 
@@ -34,4 +35,4 @@ pickle_out = open("classifier.pkl", "wb")
 pickle.dump(classifier, pickle_out) 
 pickle_out.close()
 
-
+st.write("Pickle model created!")
