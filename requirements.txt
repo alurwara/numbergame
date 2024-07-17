@@ -2,4 +2,3 @@ streamlit
 streamlit_agraph
 pandas
 numpy
-sklearn
