@@ -4,7 +4,7 @@ import sklearn
 import pickle 
 import streamlit as st
 
-df = pd.read_csv((r'./'iris.csv') 
+df = pd.read_csv((r'./iris.csv') 
 
 
 # Renaming the target column into numbers to aid training of the model 
