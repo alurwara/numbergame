@@ -1,9 +1,10 @@
 import pandas as pd 
 import numpy as np 
+import sklearn
+import pickle 
 
-df = pd.read_csv((r'./'BankNote_Authentication.csv') 
-# Dropping the Id column 
-#df.drop('Id', axis = 1, inplace = True) 
+df = pd.read_csv((r'./'iris.csv') 
+
 
 # Renaming the target column into numbers to aid training of the model 
 df['Species']= df['Species'].map({'Iris-setosa':0, 'Iris-versicolor':1, 'Iris-virginica':2}) 
@@ -27,4 +28,10 @@ y_pred = classifier.predict(X_test)
 # finding out the accuracy 
 from sklearn.metrics import accuracy_score 
 score = accuracy_score(y_test, y_pred) 
+
+# pickling the model 
+pickle_out = open("classifier.pkl", "wb") 
+pickle.dump(classifier, pickle_out) 
+pickle_out.close()
+
 
