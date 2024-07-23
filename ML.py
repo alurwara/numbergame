@@ -108,14 +108,4 @@ plt.colorbar()
 #plt.show()
 st.pyplot(fig)
 
-st.write(f"## {dataset_name} Data points")
-if dataset_name == 'Iris':
-        data1 = datasets.load_iris(as_frame=True)
-elif dataset_name == 'Wine':
-        data1 = datasets.load_wine(as_frame=True)
-else:
-        data1 = datasets.load_breast_cancer(as_frame=True)
-st.dataframe(data1.data)
 
-st.write(f"## {dataset_name} Targets")
-st.dataframe(data.target_names)
