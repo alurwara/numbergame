@@ -16,7 +16,6 @@ st.title('Machine Learning Demo')
 
 st.write("""
 # Explore different classifier and datasets
-Which one is the best?
 """)
 
 dataset_name = st.sidebar.selectbox(
