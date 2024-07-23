@@ -43,7 +43,7 @@ def get_dataset(name):
     return X, y, data
     
 
-X, y = get_dataset(dataset_name)
+X, y, data = get_dataset(dataset_name)
 st.write('Shape of dataset:', X.shape)
 st.write('number of classes:', len(np.unique(y)))
 
