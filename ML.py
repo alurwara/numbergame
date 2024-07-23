@@ -41,6 +41,7 @@ def get_dataset(name):
     X = data.data
     y = data.target
     return X, y, data
+    
 
 X, y = get_dataset(dataset_name)
 st.write('Shape of dataset:', X.shape)
