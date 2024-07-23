@@ -40,10 +40,10 @@ def get_dataset(name):
         data = datasets.load_breast_cancer()
     X = data.data
     y = data.target
-    return X, y, data
+    return X, y
     
 
-X, y, data = get_dataset(dataset_name)
+X, y = get_dataset(dataset_name)
 st.write('Shape of dataset:', X.shape)
 st.write('number of classes:', len(np.unique(y)))
 
@@ -110,4 +110,4 @@ st.pyplot(fig)
 
 st.write(f"## {dataset_name} Data points Details")
 
-st.dataframe(data)
+st.dataframe(datasets.load_iris())
