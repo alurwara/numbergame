@@ -40,7 +40,7 @@ def get_dataset(name):
         data = datasets.load_breast_cancer()
     X = data.data
     y = data.target
-    return X, y
+    return X, y, data
 
 X, y = get_dataset(dataset_name)
 st.write('Shape of dataset:', X.shape)
