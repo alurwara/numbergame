@@ -12,7 +12,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 from sklearn.metrics import accuracy_score
 
-st.title('Streamlit Example')
+st.title('Machine Learning Demo')
 
 st.write("""
 # Explore different classifier and datasets
@@ -107,3 +107,7 @@ plt.colorbar()
 
 #plt.show()
 st.pyplot(fig)
+
+st.write(f"## {dataset_name} Details")
+
+st.table(X)
