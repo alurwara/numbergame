@@ -27,7 +27,7 @@ st.write(f"## {dataset_name} Dataset")
 
 classifier_name = st.sidebar.selectbox(
     'Select classifier',
-    ('KNN', 'SVM', 'Random Forest')
+    ('K Nearest Neighbor', 'Support Vector Machine', 'Random Forest')
 )
 
 def get_dataset(name):
@@ -49,10 +49,10 @@ st.write('number of classes:', len(np.unique(y)))
 
 def add_parameter_ui(clf_name):
     params = dict()
-    if clf_name == 'SVM':
+    if clf_name == 'Support Vector Machine':
         C = st.sidebar.slider('C', 0.01, 10.0)
         params['C'] = C
-    elif clf_name == 'KNN':
+    elif clf_name == 'K Nearest Neighbor':
         K = st.sidebar.slider('K', 1, 15)
         params['K'] = K
     else:
