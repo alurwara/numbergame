@@ -15,7 +15,7 @@ from sklearn.metrics import accuracy_score
 st.title('Machine Learning Demo')
 
 st.write("""
-# Explore different classifier and datasets
+# Explore different classifiers and datasets
 """)
 
 dataset_name = st.sidebar.selectbox(
