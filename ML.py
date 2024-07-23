@@ -107,6 +107,6 @@ plt.colorbar()
 #plt.show()
 st.pyplot(fig)
 
-st.write(f"## {dataset_name} Details")
+st.write(f"## {dataset_name} Data points Details")
 
 st.dataframe(X)
