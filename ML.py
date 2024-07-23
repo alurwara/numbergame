@@ -66,9 +66,9 @@ params = add_parameter_ui(classifier_name)
 
 def get_classifier(clf_name, params):
     clf = None
-    if clf_name == 'SVM':
+    if clf_name == 'Support Vector Machine':
         clf = SVC(C=params['C'])
-    elif clf_name == 'KNN':
+    elif clf_name == 'K Nearest Neighbor':
         clf = KNeighborsClassifier(n_neighbors=params['K'])
     else:
         clf = clf = RandomForestClassifier(n_estimators=params['n_estimators'], 
