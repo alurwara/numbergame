@@ -110,4 +110,4 @@ st.pyplot(fig)
 
 st.write(f"## {dataset_name} Data points Details")
 
-st.dataframe(datasets.load_iris())
+st.dataframe(list(datasets.load_iris().target_names))
