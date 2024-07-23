@@ -111,9 +111,9 @@ st.pyplot(fig)
 st.write(f"## {dataset_name} Data points Details")
 if name == 'Iris':
         data1 = datasets.load_iris(as_frame=True)
-    elif name == 'Wine':
+elif name == 'Wine':
         data1 = datasets.load_wine(as_frame=True)
-    else:
+else:
         data1 = datasets.load_breast_cancer(as_frame=True)
 st.dataframe(data1)
 
