@@ -109,4 +109,4 @@ st.pyplot(fig)
 
 st.write(f"## {dataset_name} Data points Details")
 
-st.dataframe(X)
+st.dataframe(data)
