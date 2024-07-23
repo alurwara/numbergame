@@ -47,6 +47,17 @@ X, y,data = get_dataset(dataset_name)
 st.write('Shape of dataset:', X.shape)
 st.write('number of classes:', len(np.unique(y)))
 
+def get_classifier(clf_name, params):
+    clf = None
+    if clf_name == 'Support Vector Machine':
+        clf = SVC(C=params['C'])
+    elif clf_name == 'K Nearest Neighbor':
+        clf = KNeighborsClassifier(n_neighbors=params['K'])
+    else:
+        clf = clf = RandomForestClassifier(n_estimators=params['n_estimators'], 
+            max_depth=params['max_depth'], random_state=1234)
+    return clf
+
 def add_parameter_ui(clf_name):
     params = dict()
     if clf_name == 'Support Vector Machine':
@@ -64,16 +75,7 @@ def add_parameter_ui(clf_name):
 
 params = add_parameter_ui(classifier_name)
 
-def get_classifier(clf_name, params):
-    clf = None
-    if clf_name == 'Support Vector Machine':
-        clf = SVC(C=params['C'])
-    elif clf_name == 'K Nearest Neighbor':
-        clf = KNeighborsClassifier(n_neighbors=params['K'])
-    else:
-        clf = clf = RandomForestClassifier(n_estimators=params['n_estimators'], 
-            max_depth=params['max_depth'], random_state=1234)
-    return clf
+
 
 clf = get_classifier(classifier_name, params)
 #### CLASSIFICATION ####
