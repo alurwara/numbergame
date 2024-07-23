@@ -110,4 +110,4 @@ st.pyplot(fig)
 
 st.write(f"## {dataset_name} Details")
 
-st.table(X)
+st.dataframe(X)
