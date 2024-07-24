@@ -111,7 +111,7 @@ plt.colorbar()
 st.pyplot(fig)
 
 
-st.title(f" {dataset_name} Details")
+st.title(f" {dataset_name} Dataset Details")
 if dataset_name == 'Iris':
         data1 = datasets.load_iris(as_frame=True)
 elif dataset_name == 'Wine':
@@ -120,4 +120,5 @@ else:
         data1 = datasets.load_breast_cancer(as_frame=True)
 st.dataframe(data1.data)
 
+st.title(f" {dataset_name} Dataset Targets")
 st.dataframe(data.target_names)
