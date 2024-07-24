@@ -113,3 +113,5 @@ st.pyplot(fig)
 
 st.title(f'##{dataset_name} Details')
 st.dataframe(X)
+
+st.dataframe(data.target_names)
