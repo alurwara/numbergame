@@ -112,6 +112,12 @@ st.pyplot(fig)
 
 
 st.title(f" {dataset_name} Details")
-st.dataframe(X)
+if name == 'Iris':
+        data1 = datasets.load_iris(as_frame=True)
+elif name == 'Wine':
+        data1 = datasets.load_wine(as_frame=True)
+else:
+        data1 = datasets.load_breast_cancer(as_frame=True)
+st.dataframe(data1.data)
 
 st.dataframe(data.target_names)
