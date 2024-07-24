@@ -111,5 +111,5 @@ plt.colorbar()
 st.pyplot(fig)
 
 
-st.write(f'##{dataset_name} Details')
+st.title(f'##{dataset_name} Details')
 st.dataframe(X)
